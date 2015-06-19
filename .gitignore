@@ -1,4 +1,4 @@
 *.pyc
-settings_secret.py
+ct/settings_secret.py
 .settings/
 ct_app/todo.txt
