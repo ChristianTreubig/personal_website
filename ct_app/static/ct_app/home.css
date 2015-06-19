@@ -1,0 +1,300 @@
+#twitter_link_cont {
+    background:#2ba9e1;
+    border-radius:50%;
+    cursor:pointer;
+    height:4em;
+    width:4em;
+    
+    position:absolute;
+    top:27em;
+    left:0;
+    z-index:2;
+}
+
+#twitter_link_cont:hover {
+    background:#1A84AB;
+}
+
+#twitter_link_cont > img {
+    height:4em;
+    width:4em;
+}
+
+#twitter_feed_cont {
+    background:#2ba9e1;
+    box-sizing:border-box;
+    padding:0.5em;
+    width:18em;
+    
+    position:absolute;
+    top:0;
+    left:-18em;
+    z-index:2;
+}
+
+#category_radios_cont {
+    text-align:center;
+    /*border: 1px solid black;*/
+    /*position: relative;*/
+    /*width:9em;*/
+}
+
+.category_label > input{ /* HIDE RADIO */
+  /*visibility: hidden;*/ /* Makes input not-clickable */
+  display:none;
+}
+
+.category_label {
+    border-radius:50%;
+    box-sizing:border-box;
+    color:white;
+    cursor: pointer;
+    display: inline-block;
+    height:9em;
+    line-height:9em;
+    opacity: 0.6;
+    vertical-align:top;
+    width:9em;
+}
+
+.category_label:hover {
+    opacity:1;
+}
+
+.category_label.all {
+    border:1px solid black;
+    color:black;
+}
+
+#problems_headline {
+    text-align:center;
+}
+
+#problems_cont {
+    min-height:40em;
+}
+
+.problem_link {
+    color:white;
+    display:block;
+    margin:1em auto;
+    padding:1.5em 0;
+    position:relative;
+    text-decoration:none;
+    width:70%;
+}
+
+.problem_date {
+    font-size:0.75em;
+    
+    position:absolute;
+    top:3%;
+    right:1%;
+}
+
+.problem_problem {
+    font-size:0.85em;
+    margin:0 auto;
+    width:80%;
+}
+
+.all:hover {
+    background:white;
+}
+
+.problem_link.career {
+    background:linear-gradient(to bottom, #32BCEF, #54CCF9, #32BCEF);
+    box-shadow: 0 0.3em 0.7em 0.2em #1582D7;
+}
+
+.career:hover {
+    background:#32BCEF;
+}
+
+.problem_link.love {
+    background:linear-gradient(to bottom, #E335EF, #E050E9, #E335EF);
+    box-shadow: 0 0.3em 0.7em 0.2em #FC0477;
+}
+
+.love:hover {
+    background:#E335EF;
+}
+
+.problem_link.health {
+    background:linear-gradient(to bottom, #ED1B1A, #FA3A3A, #ED1B1A);
+    box-shadow: 0 0.3em 0.7em 0.2em #9E060B;
+}
+
+.health:hover {
+    background:#ED1B1A;
+}
+
+.problem_link.arts {
+    background:linear-gradient(to bottom, #1145C0, #3B63E8, #1145C0);
+    box-shadow: 0 0.3em 0.7em 0.2em #082D86;
+}
+
+.arts:hover {
+    background:#1145C0;
+}
+
+.problem_link.politics {
+    background:linear-gradient(to bottom, #23AE08, #4CD831, #23AE08);
+    box-shadow: 0 0.3em 0.7em 0.2em #156E04;
+}
+
+.politics:hover {
+    background:#23AE08;
+}
+
+.problem_link.sport {
+    background:linear-gradient(to bottom, #B7B804, #CCCD0B, #B7B804);
+    box-shadow: 0 0.3em 0.7em 0.2em #A3A409;
+}
+
+.sport:hover {
+    background:#B7B804;
+}
+
+.problem_link.religion {
+    background:linear-gradient(to bottom, #660CDA, #7523DF, #660CDA);
+    box-shadow: 0 0.3em 0.7em 0.2em #42088C;
+}
+
+.religion:hover {
+    background:#660CDA;
+}
+
+.problem_link.miscellaneous {
+    background:linear-gradient(to bottom, #C78806, #E48D08, #C78806);
+    box-shadow: 0 0.3em 0.7em 0.2em #9B6A04;
+}
+
+.miscellaneous:hover {
+    background:#C78806;
+}
+
+.category_label_selected {
+    opacity: 1;
+}
+
+.category_label_selected.all {
+    border-bottom: 2.5em solid black;
+}
+
+.category_label_selected.career {
+    border-bottom: 2.5em solid #061A5D;
+}
+
+.category_label_selected.love {
+    border-bottom: 2.5em solid #FC0477;
+}
+
+.category_label_selected.health {
+    border-bottom: 2.5em solid #9E060B;
+}
+
+.category_label_selected.arts {
+    border-bottom: 2.5em solid #041035;
+}
+
+.category_label_selected.politics {
+    border-bottom: 2.5em solid #156E04;
+}
+
+.category_label_selected.sport {
+    border-bottom: 2.5em solid #747805;
+}
+
+.category_label_selected.religion {
+    border-bottom: 2.5em solid #380957;
+}
+
+.category_label_selected.miscellaneous {
+    border-bottom: 2.5em solid #9B6A04;
+}
+
+#pagination {
+    margin:1em 0;
+    text-align:center;
+}
+
+.page_link {
+    background: red;
+    color:white;
+    cursor:pointer;
+    line-height:2em;
+    display:inline-block;
+    padding:0 2em;
+}
+
+.page_link:hover {
+    background:#DF3737;
+}
+
+#page_input_cont {
+    margin: 0.4em 0;
+}
+
+#page_input {
+    background:#B394F1;
+    display:inline-block;
+    font-size:1.5em;
+    width:2em;
+}
+
+#loading {
+    display:block;
+    margin:5em auto;
+}
+
+@media all and (max-width: 55em){
+    .category_label {
+        border-radius:0;
+        height:3em;
+        line-height:3em;
+        margin:0 auto;
+        width:calc(100% / 3);
+    }
+    .category_label_selected.all {
+        border-bottom: 1em solid black;
+        box-sizing:border-box;
+    }
+    .category_label_selected.career {
+        border-bottom: 1em solid #061A5D;
+    }
+    
+    .category_label_selected.love {
+        border-bottom: 1em solid #FC0477;
+    }
+    
+    .category_label_selected.health {
+        border-bottom: 1em solid #9E060B;
+    }
+    
+    .category_label_selected.arts {
+        border-bottom: 1em solid #041035;
+    }
+    
+    .category_label_selected.politics {
+        border-bottom: 1em solid #156E04;
+    }
+    
+    .category_label_selected.sport {
+        border-bottom: 1em solid #747805;
+    }
+    
+    .category_label_selected.religion {
+        border-bottom: 1em solid #380957;
+    }
+    
+    .category_label_selected.miscellaneous {
+        border-bottom: 1em solid #9B6A04;
+    }
+}
+
+@media all and (max-width: 30em){
+    .cutoff_text {
+        display:none;
+    }   
+}

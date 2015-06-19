@@ -1,0 +1,36 @@
+{% extends "ct_app/base.html" %}
+{% load staticfiles %}
+{% block meta %}
+<title>Problem Received</title>
+<meta name="description" content="Resolution in progress...">
+{% endblock meta %}
+{% block css %}
+<link rel="stylesheet" href="{% static "ct_app/submit_done.css" %}">
+{% endblock css %}
+{% block content %}
+<h2>Problem Successfully Submitted</h2>
+<p>
+	Resolution is: <span id="progress">In-Progress</span>
+</p>
+<p>
+	Your reference number is below. Use it in all correspondence relating to your problem:
+</p>
+<p id="reference_number">
+	{{ reference_number }}-1
+</p>
+<p>
+	If the problem is particularly pressing, like a fire, or your toddler tried to swallow a block, consult <a href="http://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers" target="_blank" class="inline_link">this list</a> for the appropriate number to dial to reach emergency responders depending upon your locale. They can often get there faster than I can.
+</p>
+
+<p>
+	If you’ve submitted your problem over a weekend, don’t expect a prompt reply, as I am likely either raging in a club or donating in a church.
+</p>
+<p>
+	If you’re on the verge of ending it all, watch the video below as many times as needed until the urge subsides:
+</p>
+<div id="video_wrap">
+	<div id="video">
+		<iframe src="https://www.youtube.com/embed/_0eINGyJHz8" allowfullscreen></iframe>
+	</div>
+</div>
+{% endblock content %}

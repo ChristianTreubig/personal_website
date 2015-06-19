@@ -1,0 +1,148 @@
+{% extends "ct_app/base.html" %}
+{% load staticfiles %}
+{% block meta %}
+<title>The Mission</title>
+<meta name="description" content="This web portal's guiding principles.">
+{% endblock meta %}
+{% block css %}
+<link rel="stylesheet" href="{% static "ct_app/mission.css" %}">
+{% endblock css %}
+{% block content %}
+<h2>Mission</h2>
+
+<div id="intro">
+
+{% spaceless %}
+<div id="images_cont">
+	<img src="{% static "ct_app/images/alcoholic.jpg" %}" alt="alcoholic" class="intro_image" id="left_image">
+	<img src="{% static "ct_app/images/fight.jpg" %}" alt="fight" class="intro_image" id="middle_image">
+	<img src="{% static "ct_app/images/mushroom_cloud.jpg" %}" alt="Sharon" class="intro_image" id="right_image">
+</div>
+{% endspaceless %}
+
+<p>
+	…These are some methods by which people often choose to resolve problems. They didn’t consult this website beforehand.
+</p>
+
+<p>
+I solve problems. It is my gift, I’ve come to discover. I provide the clarity that’s usually only bequeathed by hindsight.
+</p>
+
+<p>
+It all started when I was in high school and my friend Mark brought a baker’s dozen #4 pencils to the SAT. He noticed his error just as the proctor confiscated the last of the Poland Springs and began handing out the test packets. Mark begged me to help him out, pleading for just one of my several backup #2’s, sharpened or otherwise. But I saw an opportunity, and took a stand, ceding not a single pencil. Mark started sobbing, devastated that he blew his only shot at getting into UNC-Wilmington. I scolded him. I knew he had no real desire to attend UNC-Wilmington. He was an actor at heart. Everybody knew this, though he often denied it. He killed it like no other in drama club.  He breathed new life into <i>Death of a Salesman</i>.
+</p>
+
+<p>
+While his cohorts eagerly turned over the cover sheet upon hearing the “you may begin” command, Mark buried his bald head in his hands that were damp from tears and sweat. I whispered into his ear, “Only cowards save their dreams for sleep.” He stopped sobbing.
+</p>
+
+<p>
+Mark went through the motions of futilely filling in the bubbles with the mis-graded pencils that assured him such a shockingly low grade that even UNC-Asheville would be out of reach. But he seemed to consider my suggestion, and judged it to be wise. After the test, he went straight to the airport. He bought a ticket to LAX.
+</p>
+
+<p>
+I suppose I should have started out that little anecdote by stating my friend’s full name: Mark Sinclair Vincent. Yes, that one. You enjoy <i>Pitch Black</i>? So did I. You might say I had a little something to do with the casting of that flick. Mark will tell you himself… but only if you call him Vin.
+</p>
+
+<p>
+Given my track record, you may be wondering why I’m providing this website’s services free of charge. I’m wondering the same thing. Enjoy it while it lasts.
+</p>
+
+<p>
+If you have a problem, <a class="inline_link" href="{% url "submit" %}" target="_blank">let me know</a>. I’ll provide advice. Follow it if you fancy. Please do, and spread the word. My mission is a problem-free world by next July so I can enjoy the MLB All-Star Game with a clear head.
+</p>
+
+<p>
+It’s understandable that you may be hesitant to confess your fears and shortcomings to a stranger. You may doubt my competency. Well, if you don’t believe me, then believe the folks below. They’re just a few of the many whose lives have been shifted back onto the rails by yours truly…
+</p>
+
+</div>
+
+<div class="testimonial">
+<h3>Sharon Colette – 56 years old – Montecito, CA</h3>
+<img src="{% static "ct_app/images/test_sharon.jpg" %}" alt="Sharon" class="testimonial_image">
+
+<p>
+The spark was gone. The kids were dispatched, the mortgage was paid, and the retirement accounts were growing by the zero, but instead of serene bliss there was terrible fear that the last chapter of our once epic romance had been told. Time moved quicker, and its effects on our bodies seemed to accelerate all the more. Any physical attraction between my husband and I required much internal convincing and rationalization. I was beyond the help of makeup and he was beyond the help of a belt. The only thing we had to look forward to in our lives was the end of them, we both silently conceded. Until I met Christian.
+</p>
+
+<p>
+I was in Vegas for my niece’s destination baptism in the Fountains of Bellagio. He was in Vegas to give the keynote address at a motivational speakers convention. I happened across him at the blackjack tables. He was on a tight schedule, so on every card he either stayed or doubled down. When he wasn’t collecting chips from the dealers, he was refusing phone numbers from the cocktail waitresses who didn’t begin the recitation with the country code and thus weren’t sufficiently cosmopolitan to keep pace with his jetsetting lifestyle; he was telling them this. At the earliest opportunity, I scooted my butt and my chips a few seats to the left until we were shoulder to shoulder. My hand slid up his thigh. His interest seemed piqued until he noticed the sharp tan line wrapping around the first knuckle of my ring finger and took pity, and I was ashamed.
+</p>
+
+<p>
+We migrated to the bar. After pulling out the stool for me to sit, he offered me his handkerchief from the inside pocket of his sport coat so I could dab away some of the stray tears that I didn’t manage to conceal. He covertly ensured that the bartender watered down my whiskey. He asked where my husband was. I confessed that I was considering divorce, but I could imagine no better friend than my husband, and I’d like to think he felt the same about me. Christian tilted his head and sort of smirked while he stirred his bourbon, like he was waiting for a point, and didn’t speak. As the pause continued, I realized how oblivious I’d been to the obvious solution to my malaise that I’d just laid out.
+</p>
+
+<p> 
+“Mutual demotion,” he calls it. Why must divorce carry such negative connotations when it’s best used to revert to the halcyon days of just being boyfriend and girlfriend? 
+</p>
+
+<p>
+“Once you’re done getting knocked up, it may be best to get knocked down a peg,” he said. He was right. No more retreating to the couch to escape the snores. Spooning through the night is mandatory and minimum and welcome by both. My days are wrought with pleasurable pangs of anticipation, our pending ends pushed out of sight by much to do. Will he pop the question? We’re going whale watching in Catalina next Sunday. Maybe then? Or will he leave me wanting more, stringing me along just a little more, making me seduce and woo? Sometimes, when we’re doing errands around the house and we cross paths, we’ll stop, and I find myself looking into the bottom of his eyes from the top of mine. We don’t speak. Then we continue on our separate ways, each of us briefly glancing back to check if the other similarly glanced. It’s always two-for-two.
+</p>
+
+<p>
+Most may find such tranquility among recent divorcees odd, but most haven’t taken the advice of Christian. I hope my story helps to change that.
+</p>
+
+</div>
+
+<div class="testimonial">
+<h3>David Hess – 31 years old - Raleigh, NC</h3>
+<img src="{% static "ct_app/images/test_david.jpg" %}" alt="Sharon" class="testimonial_image">
+
+<p>
+The good thing about having a meager hourly wage is that you never have the free time to outspend your budget. It’s a sad symbiosis, but it gets you through the day, and the 19,710 remaining ones if I’m as average as I reckon.
+</p>
+
+<p>
+This wasn’t how I imagined my life turning out, a petty bookkeeper with skills easily replicated by anyone who could add with the aid of a calculator.
+</p>
+
+<p>
+I loved to travel. Or at least I think that I’d love it if such an opportunity was presented. My father took me to Seattle once when I was a boy and it was amazing. But I could only go as far as a ten-buck tank of gas and the rare two day weekend would take me. I’d resorted to spending my Sundays taking selfies in front of my computer monitor while it displayed the Google Street View of chic European getaways, which didn’t fool me but sometimes fooled my friend Connor into likes. (For the selfie featuring a pixelated Abbey Road crosswalk I turned my head to the side and didn’t smile.)
+</p>
+
+<p>
+I’d given up, accepted my lot. To perk myself up, I often compared my life to the billions throughout history who must’ve had it worse, like the slaves in the Roman Empire. But then my psyche took an especially dark turn when I began to feel jealousy toward the leaves and grass, especially the greenest of the lot, as they must’ve done some great photosynthesis during the day while I was three cubicles removed from seeing natural sunlight for weeks on end.
+</p>
+
+<p>
+I’d bought rope. I’d financed it. I drove home on a Tuesday, and got out of my car to get the mail from the mailbox before I parked in front of it. I was exhausted. As usual I’d forgotten to loosen the tie and unbutton the top button when I cleared the clock. There were a bunch of bill payments returned to sender because the stamps were a cent short and I wasn’t conceited enough to buy “Forever” stamps, and at the bottom of the pile were the overdue notices for those same bills. Up behind my car pulled Christian in his. He got out and introduced himself.
+</p>
+
+<p>
+That was two years ago. I’m still alive.
+</p>
+
+<p>
+He was dropping my sister Paulina home after their date/picking up my other sister Lisa before their date (he would’ve made it a double date if his Ferrari had the capacity). He knew my name. He knew my story. Paulina said she tried to steer the convo away from her brother during dinner but Christian cared too much to let it go.
+</p>
+
+<p>
+He hugged me. It was weird, at first. He was way taller than me, so my nose was in his sternum. He had a strong heart; I could tell. It occurred to me that I couldn’t remember the last time I was hugged. It might’ve been when the Hurricanes lifted the Cup in ’06 and there was a lot of that going on in the bar, but I couldn’t recall a specific instance. Anyway, this hug felt nice. He whispered, “Days aren’t for getting through. Days are for living.” I needed to hear that, or anything remotely like that. I hugged him back. I used his midsection to muffle my sniffle. He ceased his hug and pushed me back. He said, “You’re almost done, David. 19,688 days. And for many of them you won’t even be able to walk. When are you going to start living?” I had no retort.
+</p>
+
+<p>
+Christian told me “the best destinies come to those who seek to shape them,” and demanded that I take prompt action both to assert control of my career and, more concretely, get a raise. I was worth far more than I sheepishly assessed, he assured me. He said that I needed to be prepared to resign, on the spot if need be. Civil force is the only thing that will sway a capitalist, he explained.
+</p>
+
+<p>
+I was a little skittish at the prospect of confrontation, so he walked me through the plan. He helped me draft a brief, polite, but stern note that outlined my position. It read: “I don’t have a lot of time. If you won’t give me the money I deserve, then I’ll be forced to take drastic measures.”
+</p>
+
+<p>
+I was nervous. I didn’t get much sleep that night. I had to be sure to be at work at 8:30 a.m. sharp, because Christian said he’d negotiated a ten minute “window” when there wouldn’t be interference from “authorities.” I still don’t know what he meant by that.
+</p>
+
+<p>
+So, per Christian’s orders, I walked into my place of employment, the South Valley Credit Union, at the prescribed time. I approached my supervisor Danielle, who was standing behind the tellers’ counter, and handed her the note. While she unfolded it, I opened up my empty backpack, as Christian recommended, to show that I meant business about cleaning out my desk and splitting. I placed it on the counter before a wide-eyed Danielle. I was pleasantly surprised at the tactic’s immediate effectiveness, as she stuffed the backpack with what appeared to be a sizeable bonus/raise/backpay in small bills.
+</p>
+
+<p>
+I’ve spent the money wisely. You see that selfie? That’s me! I’m actually <i>in</i> Paris!
+</p>
+
+</div>
+{% endblock content %}

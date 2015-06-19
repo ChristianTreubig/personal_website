@@ -1,0 +1,186 @@
+#content_cont {
+    padding:0 1%;
+}
+
+#top_link {
+    background:#7884D5;
+    color:white;
+    display:none;
+    opacity:0.6;
+    padding:0 0.3em 0.3em 0.3em;
+    text-align:center;
+    text-decoration:none;
+    
+    
+    position:fixed;
+    top:2em;
+    right:1em;
+}
+
+#top_link:hover {
+    opacity:1;
+}
+
+#top_arrow {
+    font-size:2em;
+}
+
+h2 {
+    clear:both;
+    margin:0;
+    text-align:center;
+}
+
+#image_cont {
+    color:white;
+    float:right;
+    margin-left:0.5em;
+    text-align:center;
+    width:10em;
+}
+
+#image_cont > img {
+    display:block;
+    width:100%;
+}
+
+.problem_label {
+    font-style:italic;
+    font-size:0.8em;
+}
+
+.problem_label, .problem_detail {
+    display:inline;
+}
+
+#solution_date {
+    font-style:italic;
+    font-size:0.8em;
+    text-align:center;
+}
+
+#checkmark {
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+}
+
+#solution {
+    background:white;
+    color:black;
+    font-family: TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
+    padding:0.3em 1%;
+}
+
+.video_wrap {
+    border:1px solid white;
+    margin:1em auto;
+    width:80%;
+}
+
+.video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16/9 ratio */
+    padding-top: 30px; /* IE6 workaround*/
+    height: 0;
+    overflow: hidden;
+}
+
+.video iframe,
+.video object,
+.video embed {
+    border:0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.image_wrap {
+    background:black;
+    color:white;
+    margin:0 auto;
+    text-align:center;
+    width:75%;
+}
+
+#solution img {
+    display:block;
+    width:100%;
+}
+
+/*
+#solution > img {
+    display:block;
+    margin:0 auto;
+    width:75%;
+}
+*/
+
+#share_cont {
+    margin:2em 0;
+    font-family:Lato,sans-serif;
+    text-align:center;
+}
+
+.share_link {
+    box-sizing:border-box;
+    display:inline-block;
+    height:4em;
+    text-decoration:none;
+    width:7em;
+    
+    position:relative;
+}
+
+.share_link > img {
+    height:3em;
+    width:3em;
+    
+    position:absolute;
+    top:50%;
+    left:0;
+    
+    margin-top:-1.5em;
+}
+
+#twitter_share_link {
+    background: #2ba9e1;
+}
+
+#fb_share_link {
+    background: #3b5998;
+}
+
+#fb_share_link:hover {
+    border-right:0.7em solid #062181;
+}
+
+#twitter_share_link:hover {
+    border-right:0.7em solid #065B81;
+}
+
+.share_text {
+    color:white;
+    
+    height:4em;
+    line-height:4em;
+    
+    position:absolute;
+    right:1em;
+}
+
+@media all and (max-width: 45em){
+    .problem_label, .problem_detail {
+        display:block;
+    }
+    #solution {
+        padding:0.3em 3%;
+    }
+    .video_wrap {
+        width:95%;
+    }
+    #solution > img {
+        width:90%;
+    }
+}

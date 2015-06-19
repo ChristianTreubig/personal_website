@@ -1,0 +1,157 @@
+#content_cont {
+    padding:0 1%;
+}
+
+h2 {
+    margin:0.3em;
+    text-align:center;
+}
+
+.field_cont > label {
+    display:inline-block;
+    margin-bottom:1.2em;
+    text-align:right;
+    vertical-align:text-top;
+    width:50%;
+}
+
+#id_name, #id_age, #id_location {
+    font-size:1em;
+    padding:0.3em 0;
+}
+
+#id_name:focus, #id_age:focus, #id_location:focus, textarea:focus {
+    background:#A7EBF6;
+}
+
+.error {
+    color:red;
+    text-align:center;
+}
+
+.required {
+    color:#EB68E6;
+    font-size:0.8em;
+    font-style:italic;
+    vertical-align:middle;
+}
+
+#category_radios_cont {
+    text-align:center;
+}
+
+.category_label > input{ /* HIDE RADIO */
+  /*visibility: hidden;*/ /* Makes input not-clickable */
+  display:none;
+}
+
+.category_label {
+    background:#DEE4ED;
+    color:black;
+    /*border:1em solid gray;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;*/
+    cursor: pointer;
+    display: inline-block;
+    /*height:10em;*/
+    padding:1em;
+    /*width:25%;*/
+    /*width:20em;*/
+}
+
+.category_label:hover:not(.category_label_selected) {
+    background: #92D1DB;
+}
+
+#health_short {
+    display:none;
+}
+
+.category_label_selected {
+    color:white;
+}
+
+.category_label > img {
+    display:block;
+    height:15em;
+    width:15em;
+}
+
+#problem_cont {
+    margin:2em 0;
+}
+
+#problem_cont > label {
+    /*vertical-align:top;*/
+    display:block;
+    margin:0;
+    text-align:left;
+    width:100%;
+}
+
+#problem_cont > .required {
+    text-align:center;
+}
+
+#char_counter {
+    text-align:center;
+}
+
+textarea {
+   display:block;
+   font-family: inherit;
+   font-size: inherit;
+   margin:0 auto;
+   width:80%;
+}
+
+#submit {
+    background:#16762D;
+    border-width:0px;
+    color:white;
+    cursor:pointer;
+    display:block;
+    font-size:1em;
+    margin:1em auto;
+    padding:1em 0;
+    text-align:center;
+    text-decoration:none;
+    width:10em;
+}
+
+#submit:hover {
+    background:#27A545;
+}
+
+@media all and (max-width: 60em) {
+    #health_short {
+        display:inline;
+    }
+    #health_long {
+        display:none;
+    }
+    .category_label > img {
+        height:7em;
+        width:7em;
+    }
+}
+
+@media all and (max-width: 30em) {
+    form {
+        padding:0 4%;
+    }
+    .field_cont > label {
+        display:block;
+        text-align:left;
+        width:100%;
+    }
+    .field_cont > label {
+        margin-bottom:0;
+    }
+    .field_cont > input {
+        margin-bottom:1em;
+    }
+    .error {
+        text-align:left;
+    }
+}

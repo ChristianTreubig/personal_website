@@ -1,0 +1,52 @@
+{% extends "ct_app/base.html" %}
+{% load staticfiles %}
+{% block meta %}
+<title>ChristianTreubig.com: Personalized solutions in an impersonal world.</title>
+<meta name="description" content="ChristianTreubig.com: Personalized solutions in an impersonal world.">
+{% endblock meta %}
+{% block css %}
+<link rel="stylesheet" href="{% static "ct_app/cat_colors.css" %}">
+<link rel="stylesheet" href="{% static "ct_app/home.css" %}">
+{% endblock css %}
+{% block js %}
+<script src="{% static "ct_app/home.js" %}"></script>
+{% endblock js %}
+{% block content %}
+<div id="twitter_link_cont">
+	<img src="{% static "ct_app/images/twitter.png" %}" alt="View Twitter Feed.">
+</div>
+<div id="twitter_feed_cont">
+	<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/ChristianIsThin" data-widget-id="608772034542350337"  height="800">Tweets by @ChristianIsThin</a>     
+</div>
+
+<h2 id="problems_headline">Solved Problems</h2>
+
+<div id="form_cont">
+	<form method="get">
+	{% spaceless %}
+	<div id="category_radios_cont">
+	{% for radio in form.category %}
+		{% if radio.choice_value == "" %}
+			<label for="{{ radio.id_for_label }}" class="category_label all">
+		{% else %}
+	    	<label for="{{ radio.id_for_label }}" class="category_label {{ radio.choice_value }}">
+	    {% endif %}
+	    {% if radio.choice_value == "health" %}
+	    	Health<span class="cutoff_text"> &amp; Wellness</span>
+	    	{{ radio.tag }}
+	    {% else %}
+	        {{ radio.choice_label }}
+	        {{ radio.tag }}
+		{% endif %}
+	    </label>
+	{% endfor %}
+	</div>
+	{% endspaceless %}
+	</form>
+</div>
+
+<div id="problems_cont">
+	{% block problems %}
+	{% endblock problems %}
+</div>
+{% endblock content %}

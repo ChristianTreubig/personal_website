@@ -1,0 +1,35 @@
+.all {
+    background:white;
+}
+
+.career, .category_label_selected.career {
+    background:#32BCEF;
+}
+
+.love, .category_label_selected.love {
+    background:#E335EF;
+}
+
+.health, .category_label_selected.health {
+    background:#ED1B1A;
+}
+
+.arts, .category_label_selected.arts {
+    background:#1145C0;
+}
+
+.politics, .category_label_selected.politics {
+    background:#23AE08;
+}
+
+.sport, .category_label_selected.sport {
+    background:#B7B804;
+}
+
+.religion, .category_label_selected.religion {
+    background:#660CDA;
+}
+
+.miscellaneous, .category_label_selected.miscellaneous {
+    background:#C78806;
+}

@@ -1,0 +1,69 @@
+{% extends "ct_app/base.html" %}
+{% load staticfiles %}
+{% block meta %}
+<title>Solution prepared for: {{ object.name }}</title>
+<meta name="description" content="Yet another problem solved by Christian Treubig.">
+{% endblock meta %}
+{% block css %}
+<link rel="stylesheet" href="{% static "ct_app/cat_colors.css" %}">
+<link rel="stylesheet" href="{% static "ct_app/problem_detail.css" %}">
+{% endblock css %}
+{% block js %}
+<script src="{% static "ct_app/problem_detail.js" %}"></script>
+{% endblock js %}
+{% block content %}
+
+<a id="top_link" href="#"><div id="top_arrow">&#8679;</div><div>Top</div></a>
+
+<h2>The Problem</h2>
+
+<div id="image_cont" class="{{ object.category }}">
+
+Filed under:
+
+{% if object.category == "career" %}
+	<img src="{% static "ct_app/images/career.jpg" %}" alt="{{ object.category }}">
+{% elif object.category == "love" %}
+	<img src="{% static "ct_app/images/love.jpg" %}" alt="{{ object.category }}">
+{% elif object.category == "health" %}
+	<img src="{% static "ct_app/images/health.jpg" %}" alt="{{ object.category }}">
+{% elif object.category == "arts" %}
+	<img src="{% static "ct_app/images/arts.jpg" %}" alt="{{ object.category }}">
+{% elif object.category == "politics" %}
+	<img src="{% static "ct_app/images/politics.jpg" %}" alt="{{ object.category }}">
+{% elif object.category == "sport" %}
+	<img src="{% static "ct_app/images/sport.jpg" %}" alt="{{ object.category }}">
+{% elif object.category == "religion" %}
+	<img src="{% static "ct_app/images/religion.jpg" %}" alt="{{ object.category }}">
+{% elif object.category == "miscellaneous" %}
+	<img src="{% static "ct_app/images/miscellaneous.jpg" %}" alt="{{ object.category }}">
+{% endif %}
+
+{{ object.get_category_display }}
+
+</div>
+
+<div class="problem_cont">
+	<div class="problem_label">Submitted by: </div><div class="problem_detail">{{ object.name }}</div>
+</div>
+<div class="problem_cont">
+	<div class="problem_label">Age: </div><div class="problem_detail">{{ object.age }}</div>
+</div>
+<div class="problem_cont">
+	<div class="problem_label">Hails from: </div><div class="problem_detail">{{ object.location }}</div>
+</div>
+<div class="problem_cont">
+	<div class="problem_label">Details: </div><div class="problem_detail">{{ object.problem }}</div>
+</div>
+
+<h2>The Solution</h2>
+<div id="solution_date">Solved on {{ object.date_solve|date:"DATE_FORMAT" }} at {{ object.date_solve|time:"TIME_FORMAT" }} <span id="checkmark">&#10003;</span></div>
+{% autoescape off %}
+<div id="solution">{{ object.solution }}</div>
+{% endautoescape %}
+<div id="share_cont">
+	<a class="share_link" id="twitter_share_link" href="" target="_blank"><img src="{% static "ct_app/images/twitter.png" %}" alt="Share on Twitter"><span class="share_text">tweet</span></a>
+	<a class="share_link" id="fb_share_link" href="" target="_blank"><img src="{% static "ct_app/images/fb.png" %}" alt="Share on Facebook"><span class="share_text">share</span></a>
+</div>
+
+{% endblock content %}

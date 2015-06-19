@@ -1,0 +1,48 @@
+#content_cont {
+    padding:0 1%;
+}
+
+h2 {
+    text-align:center;
+}
+
+#progress {
+    color:#5AE84B;
+    font-style:italic;
+}
+
+#reference_number {
+    font-size:1.5em;
+}
+
+#video_wrap {
+    border:1px solid white;
+    margin:1em auto;
+    width:95%;
+}
+
+#video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16/9 ratio */
+    padding-top: 30px; /* IE6 workaround*/
+    height: 0;
+    overflow: hidden;
+}
+
+#video iframe,
+#video object,
+#video embed {
+    border:0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media all and (max-width: 45em){
+    #content_cont {
+        padding:0 3%;
+    }
+}

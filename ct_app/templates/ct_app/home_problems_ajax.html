@@ -1,0 +1,29 @@
+{% extends base_template %}
+{% block problems %}
+{% for problem in problems %}
+	<a class="problem_link {{ problem.category }}" href="{% url "problem_detail" pk=problem.pk %}">
+		<div class="problem_date">{{ problem.date_solve }}</div>
+		<div class="problem_problem">{{ problem.problem }}</div>
+	</a>
+{% endfor %}
+<div id="pagination">
+	{% if problems.start_index > 0 %}
+		{% if problems.has_previous %}
+			<div class="page_link" id="previous">Previous</div>
+		{%  endif %}
+		<span id="page_info">Page {{ problems.number }} of {{ problems.paginator.num_pages }}</span>
+		{% if problems.has_next %}
+	        <div class="page_link" id="next">Next</div>
+	    {% endif %}
+	    {% if problems.paginator.num_pages > 1 %}
+		    <div id="page_input_cont">
+		    	Go to page: <input id="page_input">
+		    </div>
+		{% endif %}
+	{% else %}
+		<div class="note">
+			<p>No Results</p>
+		</div>
+	{% endif %}
+</div>
+{% endblock problems %}
