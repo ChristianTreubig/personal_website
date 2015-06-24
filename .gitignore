@@ -2,3 +2,5 @@
 ct/settings_secret.py
 .settings/
 ct_app/todo.txt
+.project
+.pydevproject
