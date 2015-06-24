@@ -44,6 +44,9 @@ class Image(models.Model):
     
 @receiver(pre_delete, sender=Image)
 def my_image_pre_delete_handler(sender, **kwargs):
+    '''
+    Upon deleting image path from DB, delete the actual image file.
+    '''
     obj = Image.objects.get(id=kwargs["instance"].id)
     storage, path = obj.image.storage, obj.image.path
     storage.delete(path)

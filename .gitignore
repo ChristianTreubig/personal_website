@@ -4,3 +4,4 @@ ct/settings_secret.py
 ct_app/todo.txt
 .project
 .pydevproject
+media/

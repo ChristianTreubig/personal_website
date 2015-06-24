@@ -13,7 +13,7 @@ def home(request):
     problems = Problem.objects.filter(active = True)
     form = FilterForm(request.GET)
     if form.is_valid():
-        if form.cleaned_data["category"] != "":
+        if form.cleaned_data["category"] != "": #Using "and" causes errors in some odd edge cases.
             problems = problems.filter(category = form.cleaned_data["category"])
     else:
         form = FilterForm()
@@ -33,10 +33,7 @@ def home(request):
                    "form": form,})
     
 class ProblemCreate(RatelimitMixin, CreateView):
-    #ratelimit_key = [lambda x: 'min', lambda req: req.META.get('HTTP_X_REAL_IP', req.META['REMOTE_ADDR'])]
-    #ratelimit_keys = [lambda x: 'min', lambda req: req.META.get('HTTP_X_REAL_IP', req.META['REMOTE_ADDR'])]
     ratelimit_key = lambda req: req.META.get('HTTP_X_REAL_IP', req.META['REMOTE_ADDR']) #Test in Prod
-    #ratelimit_key = "ip"
     ratelimit_rate = '10/d'
     ratelimit_block = True
     ratelimit_method = 'POST'
