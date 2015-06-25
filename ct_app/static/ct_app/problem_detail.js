@@ -30,12 +30,12 @@ $(document).ready(function() {
 });
 
 function ScrollHandler(e) {
-    //throttle event:
+    //Throttle event:
     clearTimeout(_throttleTimer);
     _throttleTimer = setTimeout(function () {
         console.log('scroll');
 
-        //do work
+        //Show Top link if user is near bottom of page:
         if ($window.scrollTop() + $window.height() > $(document).height() - 200 && $window.scrollTop() != 0) {
             $("#top_link").css("display", "block");
         }
