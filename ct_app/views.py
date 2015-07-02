@@ -12,9 +12,8 @@ from ratelimit.mixins import RatelimitMixin
 def home(request):
     problems = Problem.objects.filter(active = True)
     form = FilterForm(request.GET)
-    if form.is_valid():
-        if form.cleaned_data["category"] != "": #Using "and" causes errors in some odd edge cases.
-            problems = problems.filter(category = form.cleaned_data["category"])
+    if form.is_valid() and form.cleaned_data["category"] != "":
+        problems = problems.filter(category = form.cleaned_data["category"])
     else:
         form = FilterForm()
     try:
