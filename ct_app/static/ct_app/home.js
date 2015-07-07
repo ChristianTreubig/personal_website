@@ -199,11 +199,11 @@ $(document).ready(function() {
         var $this = $(this);
         var $twitter_feed_cont = $("#twitter_feed_cont");
         if ($twitter_feed_cont.css("left") !== "0px"){
-            $this.stop().animate({left: "18em"}, ANIMATION_LENGTH);
+            $this.animate({left: "18em"}, ANIMATION_LENGTH);
             $twitter_feed_cont.animate({left: 0}, ANIMATION_LENGTH);
         }
         else {
-            $this.stop().animate({left: 0}, ANIMATION_LENGTH);
+            $this.animate({left: 0}, ANIMATION_LENGTH);
             $twitter_feed_cont.animate({left: "-18em"}, ANIMATION_LENGTH);
         }
     });
